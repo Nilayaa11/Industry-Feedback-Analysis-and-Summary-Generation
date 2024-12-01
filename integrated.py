@@ -101,7 +101,7 @@ def feedback_summarization():
 # App section 2: Performance Analysis
 def performance_analysis():
     st.title("Student and Company Performance Analysis")
-    data = pd.read_csv(r'D:\Research Cell Internship\industry feedback\Industry Mentor Feedback Form (AY 2023-24).csv')
+    data = pd.read_csv(uploaded_file)
     
     st.sidebar.header("Filters")
     companies = data['Name of The Company'].unique()
