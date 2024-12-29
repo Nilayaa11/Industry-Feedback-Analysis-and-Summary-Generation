@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: streamlit-container
-        image: https://hub.docker.com/r/nilayaa11/streamlit-app
+        image: streamlit-app
         ports:
         - containerPort: 8501
       imagePullSecrets:
