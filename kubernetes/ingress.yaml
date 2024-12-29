@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: streamlit-ingress
 spec:
-` ingressClassName: nginx
+  ingressClassName: nginx # Specify the ingress class name here
   rules:
   - host: streamlit.nilaya.com
     http:
