@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamlit-app
+  template:
+    metadata:
+      labels:
+        app: streamlit-app
+    spec:
+      containers:
+      - name: streamlit-container
+        image: https://hub.docker.com/r/nilayaa11/streamlit-app
+        ports:
+        - containerPort: 8501
+      imagePullSecrets:
+      - name: docker-registry-secret # Reference the Kubernetes secret for registry authentication
